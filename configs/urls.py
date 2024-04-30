@@ -19,6 +19,6 @@ from django.urls import path
 from cars.views import CarListCreate, CarRetrieveUpdateDestroy
 
 urlpatterns = [
-    path('cars/', CarListCreate.as_view()),
+    path('cars', CarListCreate.as_view()),
     path('cars/<int:pk>/', CarRetrieveUpdateDestroy.as_view()),
 ]
