@@ -5,6 +5,7 @@ from cars.models import Car
 from cars.serializers import CarSerializer, CarListSerializer
 from django.http import Http404
 
+
 class CarListCreateView(APIView):
     def get(self, *args, **kwargs):
 
@@ -26,6 +27,7 @@ class CarListCreateView(APIView):
 
         serializer.save()
         return Response(serializer.data, status.HTTP_201_CREATED)
+
 
 class CarRetrieveUpdateDestroyView(APIView):
     def get(self, *args, **kwargs):

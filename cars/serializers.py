@@ -6,6 +6,7 @@ class CarSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     brand = serializers.CharField(max_length=50)
     year = serializers.IntegerField()
+    seats = serializers.IntegerField()
     body_type = serializers.CharField(max_length=30)
     engine = serializers.FloatField()
 
@@ -18,6 +19,7 @@ class CarSerializer(serializers.Serializer):
             setattr(instance, key, value)
             instance.save()
             return instance
+
 
 class CarListSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
